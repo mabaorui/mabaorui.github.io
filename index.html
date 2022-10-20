@@ -128,7 +128,46 @@
         </tr>
         </table>
 
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tbody>
+          <tr onmouseout="capudf_stop()" onmouseover="capudf_start()">
+            <td width="25%">
+              <div class="one">
+                <div class="two" id="capudf_shape" style="opacity: 0;">
+                  <img src='image/capudf_before.png'  width="160" height="120">
+                </div>
+                <img src="image/capudf_after.png"  width="160" height="120">
+              </div>
+              <script type="text/javascript">
+                function capudf_start() {
+                  document.getElementById('capudf_shape').style.opacity = "1";
+                }
+                function capudf_stop() {
+                  document.getElementById('capudf_shape').style.opacity = "0";
+                }
+                capudf_stop()
+              </script>
+            </td>
 
+            <td width="75%" valign="top">
+              <a href="https://junshengzhou.github.io/CAP-UDF/">
+                <papertitle>Learning Consistency-Aware Unsigned Distance Functions Progressively from Raw Point Clouds</papertitle>
+              </a>
+              <br>
+              <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>, <strong> Baorui Ma* </strong>, <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>, <a href="http://mmvc.engineering.nyu.edu/">Yi Fang</a>, <a href="https://h312h.github.io/">Zhizhong Han</a>
+              <br>
+              <em>Conference on Computer Vision and Pattern Recognition (<strong>NeurIPS, CCF-A</strong>)</em>, 2022 
+              <br>
+              <a href="https://arxiv.org/pdf/2210.02757.pdf">paper</a> |
+              <a href="https://junshengzhou.github.io/CAP-UDF/">project page</a> |             
+              <a href="https://github.com/junshengzhou/CAP-UDF">code</a>
+
+              <p align="justify", style="font-size:13px">We present CAP-UDF to represent shapes and scenes with arbitrary architecture by learning a Consistency-Aware unsigned distance function Progressively.
+              </p>
+            </td>
+          </tr>
+          </tbody>
+       </table>
     
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
         <tr onmouseout="OnSurPrior_stop()" onmouseover="OnSurPrior_start()">  
@@ -167,6 +206,8 @@
             <a href="https://github.com/mabaorui/OnSurfacePrior">code</a>
           </td>
         </tr>
+
+
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
           <tr onmouseout="LocalPrior_stop()" onmouseover="LocalPrior_start()">  
             <td width="25%">

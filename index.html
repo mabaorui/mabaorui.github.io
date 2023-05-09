@@ -128,7 +128,7 @@
           </td>
         </tr>
         </table>
-
+        
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
 
           <tr onmouseout="noise_stop()" onmouseover="noise_start()">  
@@ -166,6 +166,45 @@
               <a href="https://github.com/mabaorui/Noise2NoiseMapping//">code</a>
             </td>
           </tr>
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+            <tr onmouseout="towards_stop()" onmouseover="towards_start()">  
+              <td width="25%">
+                <div class="one">
+                <div class="two" id = 'towards'>
+                <img src='image/towards.png' width="230" height="150"></div>
+                <img src='image/towards.png' width="230" height="150"></div>
+                </div>
+                <script type="text/javascript">
+                function towards_start() { 
+                document.getElementById('towards').style.opacity = "1";
+                }
+                function towards_stop() { 
+                document.getElementById('towards').style.opacity = "0"; 
+                }
+                towards_stop()
+                </script>
+                </script>
+              </td>
+              <td valign="top" width="75%">
+                  <a href="https://yushen-liu.github.io/main/pdf/LiuYS_CVPR2023_towards_better_gradient_consis.pdf/">
+                    <papertitle>
+                      Towards Better Gradient Consistency for Neural Signed Distance Functions via Level Set Alignment
+                    </papertitle>
+                  </a>
+              <br>
+                  <strong>Baorui Ma*</strong>,
+                  <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>
+                  <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>,
+                  <a href="https://h312h.github.io/">Zhizhong Han</a>
+              <br>
+                  <em>Conference on Computer Vision and Pattern Recognition (<strong>CVPR, CCF-A</strong>)</em>, 2023
+              <br>
+                <a href="https://yushen-liu.github.io/main/pdf/LiuYS_CVPR2023_towards_better_gradient_consis.pdf/">paper</a> |
+                <a href="https://yushen-liu.github.io/main/pdf/LiuYS_CVPR2023_towards_better_gradient_consis.pdf/">project page</a> |
+                <a href="https://yushen-liu.github.io/main/pdf/LiuYS_CVPR2023_towards_better_gradient_consis.pdf/">code</a>
+              </td>
+            </tr>
 
           <tr onmouseout="NeAF_stop()" onmouseover="NeAF_start()">  
             <td width="25%">

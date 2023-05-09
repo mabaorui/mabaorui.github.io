@@ -83,7 +83,7 @@
   <script src="script/functions.js"></script>
   </head>
   <body>
-  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+  <table width="1000" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
     <td>
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
@@ -131,42 +131,39 @@
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
 
-          <tr onmouseout="NeAF_stop()" onmouseover="NeAF_start()">  
+          <tr onmouseout="noise_stop()" onmouseover="noise_start()">  
             <td width="25%">
               <div class="one">
-              <div class="two" id = 'NeAF'>
-              <img src='image/NeAF.png' width="160" height="120"></div>
-              <img src='image/NeAF.png' width="160" height="120"></div>
+              <div class="two" id = 'noise'>
+              <img src='image/ParisZoom1.png' width="160" height="120"></div>
+              <img src='image/ParisZoom1.png' width="160" height="120"></div>
               </div>
               <script type="text/javascript">
-              function NeAF_start() { 
-              document.getElementById('NeAF').style.opacity = "1";
+              function noise_start() { 
+              document.getElementById('noise').style.opacity = "1";
               }
-              function NeAF_stop() { 
-              document.getElementById('NeAF').style.opacity = "0"; 
+              function noise_stop() { 
+              document.getElementById('noise').style.opacity = "0"; 
               }
-              NeAF_stop()
+              noise_stop()
               </script>
               </script>
             </td>
             <td valign="top" width="75%">
-                <a href="https://mabaorui.github.io/-OnSurfacePrior_project_page/">
+                <a href="https://github.com/mabaorui/Noise2NoiseMapping/">
                   <papertitle>
-                    NeAF: Learning Neural Angle Fields for Point Normal Estimation
+                    Learning Signed Distance Functions from Noisy 3D Point Clouds via Noise to Noise Mapping
                   </papertitle>
                 </a>
             <br>
-                <a href="https://lisj575.github.io/NeAF/">Shujuan Li*</a>,
-                <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>
                 <strong>Baorui Ma</strong>,
                 <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>,
                 <a href="https://h312h.github.io/">Zhizhong Han</a>
             <br>
-                <em>AAAI Conference on Computing on Artificial Intelligence (<strong>AAAI, CCF-A</strong>)</em>, 2023
+            <em>International Conference on Machine Learning (<strong>ICML, CCF-A</strong>)</em>, 2023 <strong>(<span style="color:#ff0000;">Oral</span>)</strong>
             <br>
-              <a href="https://lisj575.github.io/NeAF/">paper</a> |
-              <a href="https://lisj575.github.io/NeAF/">project page</a> |
-              <a href="https://github.com/lisj575/NeAF/">code</a>
+              <a href="https://github.com/mabaorui/Noise2NoiseMapping/blob/master/pdf/learning_signed_distance_funct.pdf/">paper</a> |
+              <a href="https://github.com/mabaorui/Noise2NoiseMapping//">code</a>
             </td>
           </tr>
 
@@ -358,7 +355,7 @@
                   <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>,
                   <a href="https://www.cs.umd.edu/~zwicker/">Matthias Zwicker</a>
               <br>
-                  <em>International Conference on Machine Learning (<strong>ICML, CCF-A</strong>)</em>, 2021
+                  <em>International Conference on Machine Learning (<strong>ICML, CCF-A</strong>)</em>, 2021 (<span style="color:#ff0000;">Spotlight</span>)</strong>
               <br>
                 (* equal contribution)
                 <br>

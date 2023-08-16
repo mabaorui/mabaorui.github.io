@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning Signed Distance Functions from Noisy 3D Point Clouds via Noise to Noise Mapping.">
+  <meta name="keywords" content="CAP-UDF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAP-UDF</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <!-- <script type="text/javascript" src="./gb3d_bundle.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://junshengzhou.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://junshengzhou.github.io/CAP-UDF">
+            CAP-UDF
+          </a>
+          <a class="navbar-item" href="https://github.com/mabaorui/NeuralPull-Pytorch">
+            Neural-Pull
+          </a>
+          <a class="navbar-item" href="https://github.com/junshengzhou/3DAttriFlow">
+            3DAttriFlow
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Learning Signed Distance Functions from Noisy 3D Point Clouds via Noise to Noise Mapping</h1>
+          <div class="column is-full_width">
+            <h2 class="title is-4">ICML 2023 <span style="color: red;"> Oral</span></h2>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://mabaorui.github.io/">Baorui Ma</a><sup>1</sup>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block">
+              <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a><sup>1</sup>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block">
+              <a href="https://h312h.github.io/">Zhizhong Han</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>School of Software, BNRist,Tsinghua University,</span>
+            <span class="author-block"><sup>2</sup>Wayne State University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2306.01405"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/mabaorui/Noise2NoiseMapping"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="margin-top: -20px"></h2>
+
+        <img src="./resources/n2n_1.png" class="center">
+
+      </div>
+    </div>
+
+    <div class="content has-text-centered">
+      <video id="replay-video"
+             autoplay
+             controls
+             muted
+             preload
+             playsinline
+             loop
+             width="100%">
+        <source src="./resources/demo.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+    <!--/ Animation. -->
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: -30px">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Learning signed distance functions (SDFs) from 3D point clouds is an important task in 3D computer vision. However, without ground truth signed distances, 
+            point normals or clean point clouds, current methods still struggle from learning SDFs from noisy point clouds. To overcome this challenge, we propose to 
+            learn SDFs via a noise to noise mapping, which does not require any clean point cloud or ground truth supervision for training. Our novelty lies in the noise
+             to noise mapping which can infer a highly accurate SDF of a single object or scene from its multiple or even single noisy point cloud observations. 
+             Our novel learning manner is supported by modern Lidar systems which capture multiple noisy observations per second. We achieve this by a novel loss which
+              enables statistical reasoning on point clouds and maintains geometric consistency although point clouds are irregular, unordered and have no point correspondence
+               among noisy observations. Our evaluation under the widely used benchmarks demonstrates our superiority over the state-of-the-art methods in surface reconstruction, point cloud denoising and upsampling.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- <h2 class="subtitle has-text-centered">
+  <strong>CAP-UDF</strong> learns a continuous UDF to represent shapes with arbitary architecture.
+</h2> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    
+
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="margin-top: -20px">Method</h2>
+
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 autoplay
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 loop
+                 width="100%">
+            <source src="./resources/method.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <img src="./resources/method.png" class="center">
+        <div class="content has-text-justified">
+          <p>
+            <b>Overview of our method.</b> Given \(N\) corrupted observations \(S=\{{N}_i|i\in[1,N],N\ge 1\}\) of an uncorrupted 3D shape or scene \({S}\), we aim to learn SDFs \(f\) of \({S}\) from \(S\) without ground truth signed distances, point normals, or clean point clouds.
+            Here, \({N}_i\) is a noisy point cloud. SDFs \(f\) predicts a signed distance \(d\) for an arbitrary query location \({q}\in \mathbb{R}^{1\times 3}\) around \({S}\), such that \(d=f({q},{c})\), where \({c}\) is a condition denoting \({S}\).
+            We train a neural network parameterized by \({\theta}\) to learn \(f\), which we denote as \(f_{{\theta}}\). After training, we can further leverage the learned \(f_{{\theta}}\) for surface reconstruction, point cloud denoising, and point cloud upsampling.
+          
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: -20px">Demo</h2>
+
+        <img src="./resources/n2n_2.png" class="center">
+        <div class="content has-text-justified">
+          <p>
+
+            Demonstration of denoising on real scans (e.g. Paris-rue-Madame scenes)
+
+          </p>
+
+        </div>
+
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 autoplay
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 loop
+                 width="100%">
+            <source src="./resources/vis.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered" style="margin-top: -20px">Comparison Results</h2>
+
+    <div class="content has-text-centered">
+      <video id="replay-video"
+             autoplay
+             controls
+             muted
+             preload
+             playsinline
+             loop
+             width="100%">
+        <source src="./resources/comp2.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+    <!-- Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">PUNet Denoising</h3>
+        <img src="./resources/denoise.png" class="center">
+        <h3 class="title is-4">3DScene Reconstruction</h3>
+        <img src="./resources/3dscene.png" class="center">
+        <h3 class="title is-4">SRB Reconstruction</h3>
+        <img src="./resources/srb.png" class="center">
+        <h3 class="title is-4">Famous Reconstruction</h3>
+        <img src="./resources/famous.png" class="center">
+        <h3 class="title is-4">ShapeNet Reconstruction</h3>
+        <img src="./resources/shapenet.png" class="center">
+        <h3 class="title is-4">DFAUST Reconstruction</h3>
+        <img src="./resources/defaust.png" class="center">
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+  </div>
+</section>
+
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{BaoruiNoise2NoiseMapping,
+      title = {Learning Signed Distance Functions from Noisy 3D Point Clouds via Noise to Noise Mapping},
+      author = {Baorui Ma and Yu-Shen Liu and Zhizhong Han},
+      booktitle = {International Conference on Machine Learning (ICML)},
+      year = {2023}
+  }
+  </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This webpage template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</body>
+</html>

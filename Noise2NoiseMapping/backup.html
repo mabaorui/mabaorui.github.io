@@ -1,0 +1,141 @@
+
+<section class="section">
+    <div class="container is-max-desktop">
+  
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3" style="margin-top: -20px">Reconstruction Results</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container is-centered">
+      <!-- <div class="container is-max-desktop"> -->
+  
+        <!-- Results. -->
+      <!-- <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths"> -->
+      <div class="view-3D">
+        <p class="view-3D-title">
+            ShapeNet Cars:
+        </p>
+      
+      
+        <div>
+          <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+          
+          <table class="dataintable">
+          <!-- <tr>
+          <th style="width:50%;">Liberty</th>
+          <th style="width:50%;">Dragon</th>
+          </tr> -->
+          
+          <tr>
+          <td>
+              <model-viewer alt="View reconstruction results in 3D" src="./objects/lounge.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+          </td>
+          <td>
+              <model-viewer alt="View reconstruction results in 3D" src="./objects/stonewall.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./objects/lounge.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="-45deg 75deg auto"
+            />
+          </td>
+          </tr>
+  
+          
+          </table>
+        </div>
+        <p class="view-3D-title">
+          3D Scene:
+        </p>
+        <div>
+          <!-- <h2><strong>Surface reconstruction of a real scanned scene.</strong></h2> -->
+          
+          <table class="dataintable">
+          <tr>
+          <!-- <th style="width:100%;">Surface reconstruction of a real scanned scene.</th> -->
+          </tr>
+          
+          <tr>
+          <td>
+              <model-viewer alt="View reconstruction results in 3D" src="./objects/lounge.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+          </td>
+          </tr>
+          <tr>
+            <td>
+                <model-viewer alt="View reconstruction results in 3D" src="./objects/stonewall.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+            </td>
+          </tr>
+          
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="section">
+    <div class="container is-max-desktop">
+  
+      <!-- Results. -->
+      <div class="columns is-centered ">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Visualization Results</h2>
+  
+  
+          <h3 class="title is-4">Self-Reconstruction</h3>
+          <div class="content has-text-justified">
+            <p>
+               
+            </p>
+          </div>
+          
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                   autoplay
+                   controls
+                   muted
+                   preload
+                   playsinline
+                   loop
+                   width="90%">
+              <source src="./resources/v1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+  
+          <h3 class="title is-4">Point Cloud Completion</h3>
+          <div class="content has-text-justified">
+            <p>
+            </p>
+          </div>
+          
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                   autoplay
+                   controls
+                   muted
+                   preload
+                   playsinline
+                   loop
+                   width="90%">
+              <source src="./resources/v2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          
+  
+        </div>
+      </div>
+  
+    </div>
+  </section>

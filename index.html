@@ -96,16 +96,14 @@
           ruthfong at robots dot ox dot ac dot uk-->
         </p>
         <p>
-          I am a doctoral student at <a href="https://www.tsinghua.edu.cn/">the School of Software, Tsinghua University</a>. During my studies, I majorly conduct 3D computer vision research. Specifically, my research interests include 3D reconstruction, multi-view 3D reconstruction, and surface reconstruction from point clouds. I enrolled in 2018 and expected to graduate in June 2023 with a Ph.D. I am currently working as a research intern at <a href="https://damo.alibaba.com/">the Autopilot Labs of Alibaba DAMO Academy</a>. I am looking for <strong>job opportunities related to 3D computer vision</strong>. If there are cooperation opportunities, please contact me by email.
-        </p>  
+          I am a researcher at Beijing Academy of Artificial Intelligence <a href="https://www.baai.ac.cn/english.html/">(BAAI)</a>.  I received my PhD degree from <a href="https://www.tsinghua.edu.cn/en/"> the School of Software, Tsinghua University</a>, advised by Prof. Yu-Shen Liu.
+
+        </p> 
         <p>
-          我是<a href="https://www.tsinghua.edu.cn/">清华大学软件学院</a>博士生，就读期间从事三维计算机视觉方面研究，研究兴趣包括三维重建、多视图重建、点云的表面重建。18年入学，预计23年6月份博士毕业，目前在<a href="https://damo.alibaba.com/">阿里巴巴达摩院自动驾驶实验室</a>实习。
-          <p>
-            我最近正在寻找<strong>三维计算机视觉相关的工作机会</strong>，如有合作机会请邮件联系， 邮箱：mbr18@mails.tsinghua.edu.cn
-          </p>
+          My research interests lie in the area of 3D computer vision, 3D foundation models, 3D reconstruction, multi-view 3D reconstruction and surface reconstruction from point clouds.
         </p>
         <p align=center>
-          <a href="mailto:mbr18@mails.tsinghua.edu.cn">Email</a> &nbsp|&nbsp
+          <a href="mailto:brma@baai.ac.cn">Email</a> &nbsp|&nbsp
           <!--<a href="files/.pdf">CV</a> &nbsp|&nbsp-->
           <a href="https://github.com/mabaorui">GitHub</a> &nbsp|&nbsp
           <a href="https://scholar.google.com/citations?user=rmgXhrEAAAAJ&hl=en">Google Scholar</a> &nbsp|&nbsp
@@ -124,12 +122,132 @@
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <td width="100%" valign="middle">
             <heading>Research</heading>
-            <p>(*Equal Contribution)</p>
+            <p>(*: Equal Contribution, #: corresponding author)</p>
           </td>
         </tr>
         </table>
         
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+
+            <tr onmouseout="uni3d_stop()" onmouseover="uni3d_start()">
+              <td width="25%">
+                <div class="one">
+                  <div class="two" id="uni3d" style="opacity: 0;">
+                    <img src='image/uni3d_before.jpg' width="225">
+                  </div>
+                  <img src="image/uni3d_after.jpg" width="225">
+        
+                </div>
+                <script type="text/javascript">
+                  function uni3d_start() {
+                    document.getElementById('uni3d').style.opacity = "1";
+                  }
+                  function uni3d_stop() {
+                    document.getElementById('uni3d').style.opacity = "0";
+                  }
+                  uni3d_stop()
+                </script>
+              </td>
+        
+              <td width="65%" valign="top">
+                <a href="https://github.com/baaivision/Uni3D">
+                  <papertitle>Uni3D: Exploring Unified 3D Representation at Scale
+                  </papertitle>
+                </a>
+                <br>
+                <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>, <a href="https://github.com/Wolfwjs/"> Jinsheng Wang*</a>, <strong> Baorui Ma*#</strong>, 
+                <a href="https://yushen-liu.github.io/"> Yu-Shen Liu</a>, <a href="https://scholar.google.com/citations?user=knvEK4AAAAAJ&hl=en"> Tiejun Huang</a>, <a href="https://www.xloong.wang/">Xinlong Wang#</a>
+                <br>
+                <em>arXiv 2023.
+                <br>
+                <a href="https://huggingface.co/BAAI/Uni3D/tree/main/modelzoo">Model Zoo</a> |             
+                <a href="https://arxiv.org/abs/2310.06773/">arXiv</a> |
+                <a href="https://github.com/baaivision/Uni3D">code</a>
+        
+                <p align="justify", style="font-size:13px">We present Uni3D, a unified and scalable 3D pretraining framework for large-scale 3D representation learning, and explore its limits at the scale of one billion parameters.
+                </p>
+              </td>
+            </tr>
+  
+            <tr onmouseout="VP2P_stop()" onmouseover="VP2P_start()">
+              <td width="25%">
+                <div class="one">
+                  <div class="two" id="VP2P" style="opacity: 0;">
+                    <video width="225" muted="" autoplay="" loop="">
+                      <source src="image/Video_VP2PMatching_before.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <img src="image/Video_VP2PMatching_after.png" width="225">
+        
+                </div>
+  
+                <script type="text/javascript">
+                  function VP2P_start() {
+                    document.getElementById('VP2P').style.opacity = "1";
+                  }
+                  function VP2P_stop() {
+                    document.getElementById('VP2P').style.opacity = "0";
+                  }
+                  VP2P_stop()
+                </script>
+              </td>
+        
+              <td width="65%" valign="top">
+                <a href="">
+                  <papertitle>Differentiable Registration of Images and LiDAR Point Clouds with VoxelPoint-to-Pixel Matching
+                  </papertitle>
+                </a>
+                <br>
+                <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>, <strong> Baorui Ma*</strong>, Wenyuan Zhang, <a href="http://mmvc.engineering.nyu.edu/">Yi Fang</a>,
+                <a href="https://yushen-liu.github.io/"> Yu-Shen Liu#</a>, <a href="https://h312h.github.io/">Zhizhong Han</a>
+                <br>
+                <em>Conference on Neural Information Processing Systems <b>(NeurIPS, CCF-A)</b></em>, 2023  (<strong><span style="color:#ff0000;">Spotlight</span></strong>)
+                <br>
+                <a href="">project page</a> |             
+                <a href="">arXiv</a> |
+                <a href="">code</a>
+              </td>
+            </tr>
+
+
+            <tr onmouseout="ICCVUDF_stop()" onmouseover="ICCVUDF_start()">
+              <td width="25%">
+                <div class="one">
+                  <div class="two" id="ICCVUDF" style="opacity: 0;">
+                    <img src='image/iccv23udf_before.gif' width="225">
+                  </div>
+                  <img src="image/iccv23udf_before.gif" width="225">
+  
+                </div>
+                <script type="text/javascript">
+                  function ICCVUDF_start() {
+                    document.getElementById('ICCVUDF').style.opacity = "1";
+                  }
+                  function ICCVUDF_stop() {
+                    document.getElementById('ICCVUDF').style.opacity = "0";
+                  }
+                  ICCVUDF_stop()
+                </script>
+              </td>
+  
+              <td width="65%" valign="top">
+                <a href="https://github.com/junshengzhou/LevelSetUDF">
+                  <papertitle>Learning a More Continuous Zero Level Set in Unsigned Distance Fields through Level Set Projection
+                  </papertitle>
+                </a>
+                <br>
+                <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>, <strong> Baorui Ma*</strong>, Shujuan Li, 
+                <a href="https://yushen-liu.github.io/"> Yu-Shen Liu#</a>, <a href="https://h312h.github.io/">Zhizhong Han</a>
+                <br>
+                <em>IEEE/CVF International Conference on Computer Vision <b>(ICCV, CCF-A)</b></em>, 2023
+                <br>
+                <a href="https://github.com/junshengzhou/LevelSetUDF">project page</a> |             
+                <a href="https://arxiv.org/abs/2308.11441/">arXiv</a> |
+                <a href="https://github.com/junshengzhou/LevelSetUDF">code</a>
+  
+              </td>
+            </tr>
 
           <tr onmouseout="noise_stop()" onmouseover="noise_start()">  
             <td width="25%">
@@ -157,7 +275,7 @@
                 </a>
             <br>
                 <strong>Baorui Ma</strong>,
-                <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>,
+                <a href="https://yushen-liu.github.io/">Yu-Shen Liu#</a>,
                 <a href="https://h312h.github.io/">Zhizhong Han</a>
             <br>
             <em>International Conference on Machine Learning (<strong>ICML, CCF-A</strong>)</em>, 2023 <strong>(<span style="color:#ff0000;">Oral</span>)</strong>
@@ -195,7 +313,7 @@
               <br>
                   <strong>Baorui Ma*</strong>,
                   <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>,
-                  <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>,
+                  <a href="https://yushen-liu.github.io/">Yu-Shen Liu#</a>,
                   <a href="https://h312h.github.io/">Zhizhong Han</a>
               <br>
                   <em>Conference on Computer Vision and Pattern Recognition (<strong>CVPR, CCF-A</strong>)</em>, 2023
@@ -234,7 +352,7 @@
                 <a href="https://lisj575.github.io/NeAF/">Shujuan Li*</a>,
                 <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>
                 <strong>Baorui Ma</strong>,
-                <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>,
+                <a href="https://yushen-liu.github.io/">Yu-Shen Liu#</a>,
                 <a href="https://h312h.github.io/">Zhizhong Han</a>
             <br>
                 <em>AAAI Conference on Computing on Artificial Intelligence (<strong>AAAI, CCF-A</strong>)</em>, 2023 <strong>(<span style="color:#ff0000;">Oral</span>)</strong>
@@ -271,7 +389,7 @@
                 <papertitle>Learning Consistency-Aware Unsigned Distance Functions Progressively from Raw Point Clouds</papertitle>
               </a>
               <br>
-              <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>, <strong> Baorui Ma* </strong>, <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>, <a href="http://mmvc.engineering.nyu.edu/">Yi Fang</a>, <a href="https://h312h.github.io/">Zhizhong Han</a>
+              <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>, <strong> Baorui Ma* </strong>, <a href="https://yushen-liu.github.io/">Yu-Shen Liu#</a>, <a href="http://mmvc.engineering.nyu.edu/">Yi Fang</a>, <a href="https://h312h.github.io/">Zhizhong Han</a>
               <br>
               <em>Conference on Neural Information Processing Systems (<strong>NeurIPS, CCF-A</strong>)</em>, 2022 
               <br>
@@ -313,7 +431,7 @@
               </a>
           <br>
               <strong>Baorui Ma</strong>,
-              <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>,
+              <a href="https://yushen-liu.github.io/">Yu-Shen Liu#</a>,
               <a href="https://h312h.github.io/">Zhizhong Han</a>
           <br>
               <em>Conference on Computer Vision and Pattern Recognition (<strong>CVPR, CCF-A</strong>)</em>, 2022
@@ -352,7 +470,7 @@
                 </a>
             <br>
                 <strong>Baorui Ma</strong>,
-                <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>,
+                <a href="https://yushen-liu.github.io/">Yu-Shen Liu#</a>,
                 <a href="https://www.cs.umd.edu/~zwicker/">Matthias Zwicker</a>
                 <a href="https://h312h.github.io/">Zhizhong Han</a>
             <br>
@@ -391,7 +509,7 @@
               <br>
                   <strong>Baorui Ma*</strong>,
                   <a href="https://h312h.github.io/">Zhizhong Han*</a>
-                  <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>,
+                  <a href="https://yushen-liu.github.io/">Yu-Shen Liu#</a>,
                   <a href="https://www.cs.umd.edu/~zwicker/">Matthias Zwicker</a>
               <br>
                   <em>International Conference on Machine Learning (<strong>ICML, CCF-A</strong>)</em>, 2021 (<span style="color:#ff0000;">Spotlight</span>)</strong>
@@ -428,10 +546,10 @@
                       </papertitle>
                     </a>
                 <br>
-                    <a href="https://h312h.github.io/">Zhizhong Han</a>
+                    <a href="https://h312h.github.io/">Zhizhong Han</a>,
                     <strong>Baorui Ma</strong>,
                     <a href="https://www.cs.umd.edu/~zwicker/">Matthias Zwicker</a>,
-                    <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>
+                    <a href="https://yushen-liu.github.io/">Yu-Shen Liu#</a>
                 <br>
                     <em>IEEE Transactions on Image Processing (SCI, Impact factor: 9.34) (<strong>TIP, CCF-A</strong>)</em>, 2020
                 <br>
@@ -477,7 +595,7 @@
           <font size="2">
           template adapted from <a href="https://jonbarron.info/"><font size="2">this awesome website</font></a>
           <br>
-          Last updated: May 2023
+          Last updated: Oct 2023
           <br>
           <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmabaorui.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
         </font>

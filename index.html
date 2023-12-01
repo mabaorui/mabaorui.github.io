@@ -129,6 +129,51 @@
         
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
 
+          <tr onmouseout="geodream_stop()" onmouseover="geodream_start()">
+            <td width="25%">
+              <div class="one">
+                <div class="two" id="geodream" style="opacity: 0;">
+                  <video width="225" muted="" autoplay="" loop="">
+                    <source src="image/GeoDream_Video_teaser.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <img src="image/Qualitative-Comparison.jpg" width="225">
+      
+              </div>
+
+              <script type="text/javascript">
+                function geodream_start() {
+                  document.getElementById('geodream').style.opacity = "1";
+                }
+                function geodream_stop() {
+                  document.getElementById('geodream').style.opacity = "0";
+                }
+                geodream_stop()
+              </script>
+            </td>
+      
+            <td width="65%" valign="top">
+              <a href="https://mabaorui.github.io/GeoDream_page/">
+                <papertitle>GeoDream: Disentangling 2D and Geometric Priors for High-Fidelity and Consistent 3D Generation
+                </papertitle>
+              </a>
+              <br>
+                <strong> Baorui Ma*#</strong>, <a href="https://github.com/Bitterdhg/"> Haoge Deng*</a>, <a href="https://junshengzhou.github.io/"> Junsheng Zhou </a>, 
+                <a href="https://yushen-liu.github.io/"> Yu-Shen Liu</a>, <a href="https://scholar.google.com/citations?user=knvEK4AAAAAJ&hl=en"> Tiejun Huang</a>, <a href="https://www.xloong.wang/">Xinlong Wang#</a>
+                <br>
+                <em>arXiv 2023.
+                <br>
+                <a href="https://mabaorui.github.io/GeoDream_page/">project page</a> |             
+                <a href="https://arxiv.org/abs/2311.17971/">arXiv</a> |
+                <a href="https://github.com/baaivision/GeoDream">code</a>
+                <p align="justify", style="font-size:13px">We present GeoDream, a 3D generation method that incorporates explicit generalized 3D priors with 2D diffusion priors to enhance the capability of obtaining unambiguous 3D consistent geometric structures without sacrificing diversity or fidelity.
+                </p>
+            </td>
+          </tr>
+
+
+
             <tr onmouseout="uni3d_stop()" onmouseover="uni3d_start()">
               <td width="25%">
                 <div class="one">

@@ -127,6 +127,144 @@
         </tr>
         </table>
         
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tbody>
+          <tr onmouseout="UDiFF_stop()" onmouseover="UDiFF_start()">
+            <td width="28%">
+              <div class="one">
+                <div class="two" id="UDiFF" style="opacity: 0;">
+                  <video width="225" muted="" autoplay="" loop="">
+                    <source src="image/UDiFF_after_2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <img src="image/UDiFF_before.png" width="225">
+        
+              </div>
+        
+              <script type="text/javascript">
+                function UDiFF_start() {
+                  document.getElementById('UDiFF').style.opacity = "1";
+                }
+                function UDiFF_stop() {
+                  document.getElementById('UDiFF').style.opacity = "0";
+                }
+                UDiFF_stop()
+              </script>
+            </td>
+        
+            <td width="65%" valign="top">
+              <a href="https://weiqi-zhang.github.io/UDiFF/">
+                <papertitle>UDiFF: Generating Conditional Unsigned Distance Fields with Optimal Wavelet Diffusion
+                </papertitle>
+              </a>
+              <br>
+              <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>, Weiqi Zhang*, <strong> Baorui Ma#</strong>, Kanle Shi, 
+              <a href="https://yushen-liu.github.io/"> Yu-Shen Liu</a>, <a href="https://h312h.github.io/">Zhizhong Han</a>
+              <br>
+              <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b></em>, 2024
+              <br>
+              <a href="https://weiqi-zhang.github.io/UDiFF/">project page</a> |             
+              <a href="https://arxiv.org/abs/2404.06851">arXiv</a> |
+              <a href="https://github.com/weiqi-zhang/UDiFF">code</a>
+        
+              <p align="justify", style="font-size:13px">UDiFF is a 3D diffusion model for unsigned distance fields (UDFs) which is capable to generate textured 3D shapes with open surfaces from text conditions or unconditionally.
+              </p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tbody>
+          <tr onmouseout="cappami_stop()" onmouseover="cappami_start()">
+            <td width="28%">
+              <div class="one">
+                <div class="two" id="cappami_shape" style="opacity: 0;">
+                  <img src='image/cappami_before.png' width="225">
+                </div>
+                <img src="image/cappami_after.png" width="225">
+        
+              </div>
+              <script type="text/javascript">
+                function cappami_start() {
+                  document.getElementById('cappami_shape').style.opacity = "1";
+                }
+                function cappami_stop() {
+                  document.getElementById('cappami_shape').style.opacity = "0";
+                }
+                cappami_stop()
+              </script>
+            </td>
+        
+            <td width="65%" valign="top">
+              <a href="https://junshengzhou.github.io/CAP-UDF/">
+                <papertitle>CAP-UDF: Learning Unsigned Distance Functions Progressively from Raw Point Clouds with Consistency-Aware Field Optimization</papertitle>
+              </a>
+              <br>
+              <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>, <strong> Baorui Ma*</strong>, Shujuan Li, <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>, <a href="http://mmvc.engineering.nyu.edu/">Yi Fang</a>, <a href="https://h312h.github.io/">Zhizhong Han</a>
+              <br>
+              <em>IEEE Transactions on Pattern Analysis and Machine Intelligence <b>(TPAMI)</b></em>, 2024
+              <br>
+              <a href="https://junshengzhou.github.io/CAP-UDF/">project page</a> |             
+              <a href="https://ieeexplore.ieee.org/document/10506631">IEEE Xplore</a> | <a href="https://arxiv.org/pdf/2210.02757.pdf">arXiv</a> |
+              <a href="https://github.com/junshengzhou/CAP-UDF">code</a>
+        
+              <p align="justify", style="font-size:13px">We present CAP-UDF to represent shapes and scenes with arbitrary architecture by learning a Consistency-Aware unsigned distance function Progressively.
+              </p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tbody>
+          <tr onmouseout="oae_stop()" onmouseover="oae_start()">
+            <td width="28%">
+              <div class="one">
+                  <div class="two" id="oae_shape" style="opacity: 0;">
+                      <video width="225" muted="" autoplay="" loop="">
+                        <source src="image/3doae_after.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                  </div>
+                <img src="image/3doae_before.png" width="225">
+                <td width="65%" valign="top">
+                  <a href="https://junshengzhou.github.io/3D-OAE/">
+                    <papertitle>3D-OAE: Occlusion Auto-Encoders for Self-Supervised Learning on Point Clouds</papertitle>
+                  </a>
+                  <br>
+                  <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>, <a href="https://scholar.google.com/citations?user=7gcGzs8AAAAJ&hl=zh-CN&oi=ao"> Xin Wen*</a>, <strong> Baorui Ma</strong>,
+                  <a href="https://yushen-liu.github.io/"> Yu-Shen Liu</a>, <a href="https://www.gaoyue.org/"> Yue Gao</a>, <a href="http://mmvc.engineering.nyu.edu/">Yi Fang</a>, <a href="https://h312h.github.io/">Zhizhong Han</a>
+                  <br>
+                  <em>IEEE International Conference on Robotics and Automation <b>(ICRA)</b></em>, 2024  (<strong><span style="color:#ff0000;">Oral</span></strong>)
+                  <br>
+                  <a href="https://junshengzhou.github.io/3D-OAE/">project page</a> |             
+                  <a href="https://arxiv.org/pdf/2203.14084.pdf">arXiv</a> |
+                  <a href="https://github.com/junshengzhou/3D-OAE">code</a>
+        
+                  <p align="justify", style="font-size:13px">We present 3D-OAE, a novel self-supervised point cloud representation learning framework which is highly efficient and can be further transferred to various downstream tasks.
+                  </p>
+                </td>
+              </div>
+              <script type="text/javascript">
+                function oae_start() {
+                  document.getElementById('oae_shape').style.opacity = "1";
+                }
+                function oae_stop() {
+                  document.getElementById('oae_shape').style.opacity = "0";
+                }
+                oae_stop()
+              </script>
+            </td>
+
+
+          </tr>
+          </tbody>
+        </table>
+
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
 
           <tr onmouseout="geodream_stop()" onmouseover="geodream_start()">

@@ -91,7 +91,7 @@
       <tr>
         <td width="67%" valign="middle">
         <p align="center">
-          <name>Baorui Ma(马宝睿)</name>
+          <name>Baorui Ma</name>
           <!--<br>
           ruthfong at robots dot ox dot ac dot uk-->
         </p>
@@ -130,6 +130,89 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
           
 
+          <tr onmouseout="See3D_stop()" onmouseover="See3D_start()">
+            <td width="25%">
+              <div class="one">
+                <div class="two" id="See3D" style="opacity: 0;">
+                  <video width="225" muted="" autoplay="" loop="">
+                    <source src="image/see3d.png" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <img src="image/see3d.png" width="225">
+        
+              </div>
+        
+              <script type="text/javascript">
+                function See3D_start() {
+                  document.getElementById('See3D').style.opacity = "1";
+                }
+                function See3D_stop() {
+                  document.getElementById('See3D').style.opacity = "0";
+                }
+                See3D_stop()
+              </script>
+            </td>
+        
+            <td width="65%" valign="top">
+              <a href="https://github.com/baaivision/See3D/">
+                <papertitle>You See it, You Got it: Learning 3D Creation on Pose-Free Videos at Scale
+                </papertitle>
+              </a>
+              <br>
+              <strong> Baorui Ma*</strong>, <a href="https://gaohchen.github.io/">Huachen Gao</a>*, <a href="https://github.com/Bitterdhg/">Haoge Deng</a>*,
+              <a href="https://greatlog.github.io/">Zhengxiong Luo</a>,<a href="https://scholar.google.com/citations?user=knvEK4AAAAAJ&hl=en">Tiejun Huang</a>, <a href="https://julie-tang00.github.io/">Lulu Tang#</a>,<a href="https://www.xloong.wang/">Xinlong Wang#</a>
+              <br>
+              <a href="https://arxiv.org/abs/2412.06699">[arxiv]</a> | 
+              <a href="https://vision.baai.ac.cn/see3d/">[Project page]</a> | 
+              <a href="https://github.com/baaivision/See3D">[Code]</a> | 
+              <a href="https://github.com/baaivision/See3D">[Dataset]</a> | 
+              <a href="https://mp.weixin.qq.com/s/tP_YOkL6kAdeoHf-44Ls5Q">[Post]</a>
+        
+              <p align="justify", style="font-size:13px">See3D is a scalable visual-conditional MVD model for open-world 3D creation, which can be trained on web-scale video collections without camera pose annotations.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="fastn2n_stop()" onmouseover="fastn2n_start()">
+            <td width="28%">
+              <div class="one">
+                <div class="two" id="fastn2n_shape" style="opacity: 0;">
+                  <img src='image/FastN2N_after.gif' width="225">
+                </div>
+                <img src="image/FastN2N_before.png" width="225">
+        
+              </div>
+              <script type="text/javascript">
+                function fastn2n_start() {
+                  document.getElementById('fastn2n_shape').style.opacity = "1";
+                }
+                function fastn2n_stop() {
+                  document.getElementById('fastn2n_shape').style.opacity = "0";
+                }
+                fastn2n_stop()
+              </script>
+            </td>
+          
+            <td width="65%" valign="top">
+              <a href="https://mabaorui.github.io/Noise2NoiseMapping/">
+                <papertitle>Fast Learning of Signed Distance Functions from Noisy Point Clouds via Noise to Noise Mapping</papertitle>
+              </a>
+              <br>
+              <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>, <strong> Baorui Ma*</strong>, <a href="https://yushen-liu.github.io/">Yu-Shen Liu</a>, <a href="https://h312h.github.io/">Zhizhong Han</a>
+              <br>
+              <em>IEEE Transactions on Pattern Analysis and Machine Intelligence <b>(TPAMI)</b></em>, 2024
+              <br>
+              <a href="https://mabaorui.github.io/Noise2NoiseMapping/">project page</a> |             
+              <a href="https://ieeexplore.ieee.org/document/10561582">IEEE Xplore</a> | <a href="https://arxiv.org/abs/2407.14225">arXiv</a> |
+              <a href="https://github.com/mabaorui/Noise2NoiseMapping">code</a>
+        
+              <p align="justify", style="font-size:13px">We present a fast learning framework capable of inferring signed distance functions from noisy shapes within one minute through noise-to-noise mapping.
+              </p>
+            </td>
+          </tr>
+
+
           <tr onmouseout="UDiFF_stop()" onmouseover="UDiFF_start()">
             <td width="25%">
               <div class="one">
@@ -163,6 +246,8 @@
               <a href="https://junshengzhou.github.io/"> Junsheng Zhou* </a>, Weiqi Zhang*, <strong> Baorui Ma#</strong>, Kanle Shi, 
               <a href="https://yushen-liu.github.io/"> Yu-Shen Liu#</a>, <a href="https://h312h.github.io/">Zhizhong Han</a>
               <br>
+              <em>arXiv, 2024
+              <br>
               <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b></em>, 2024
               <br>
               <a href="https://weiqi-zhang.github.io/UDiFF/">project page</a> |             
@@ -170,6 +255,7 @@
               <a href="https://github.com/weiqi-zhang/UDiFF">code</a>
         
               <p align="justify", style="font-size:13px">UDiFF is a 3D diffusion model for unsigned distance fields (UDFs) which is capable to generate textured 3D shapes with open surfaces from text conditions or unconditionally.
+              
               </p>
             </td>
           </tr>
